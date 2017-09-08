@@ -1,15 +1,15 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Index from '../pages/index.vue'
+import App from '../App.vue';
 
-Vue.use(Router);
-
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: Index
-    }
-  ]
-})
+export default [{
+  path: '/',
+  redirect: '/imgs/1',
+},
+{
+  path: '/imgs/:pageNum',
+  component: App.components.ImgPage,
+},
+{
+  path: '/login',
+  component: App.components.LoginPage,
+},
+];

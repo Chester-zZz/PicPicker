@@ -1,20 +1,25 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import router from './router'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+import VueRouter from 'vue-router';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-default/index.css';
+import routes from './router/index';
+import App from './App.vue';
 
-import Index from './pages/index.vue'
-import ImageContainer from './components/ImageContainer.vue'
 Vue.config.productionTip = false;
+Vue.use(VueRouter);
 Vue.use(ElementUI);
-
+Vue.use(VueResource);
+const router = new VueRouter({ routes });
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  template: '<ImageContainer/>',
-  components: { ImageContainer }
+  template: '<App/>',
+  components: {
+    App,
+  },
 });

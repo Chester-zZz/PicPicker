@@ -18,6 +18,9 @@
 <script>
 export default {
   data() {
+      props:{
+
+      }
     return {
       form: {
         userName: '',
