@@ -10,6 +10,7 @@
 <script>
   import ImageContainer from '../components/ImageContainer.vue';
   import ImageFooter from '../components/ImgPageFooter.vue';
+  import Config from '../config.js';
   export default {
     data() {
       return {
@@ -22,7 +23,7 @@
 //          url类似于/imgs/所以要substring
           const thisPageNum = parseInt(this.$route.path.substring(6));
 //          console.log(thisPageNum);
-          this.$http.get(`http://127.0.0.1:3000/api/getPage/${thisPageNum}`).then(function (response) {
+          this.$http.get(`${Config.getPageApi}/${thisPageNum}`).then(function (response) {
             this.imgAddresses = response.body;
           });
           window.scrollTo(0, 0);

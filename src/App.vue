@@ -10,15 +10,15 @@ import ImgPage from './pages/images_page.vue';
 export default {
   name: 'app',
   components: {
-      LoginPage,
-      ImgPage,
+    LoginPage,
+    ImgPage,
   },
 };
 </script>
 
 <style>
 #app {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 </style>
